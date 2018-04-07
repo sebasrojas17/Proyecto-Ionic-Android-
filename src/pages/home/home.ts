@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { PostService } from './post.service';
+import { PostService } from '../post-blog/post.service';
+import { PostCreateComponent } from '../post-blog/postblog-create/post-create';
 
 @Component({
   selector: 'page-home',
@@ -17,9 +18,14 @@ public post:any;
     this.postService.getAllPost()
     .subscribe(res => {
       console.log("Datos en HomePage", res);
-      this.post=res; 
+      this.post=res;
     }, err => {
      console.log("Error!",err)
-    })
+   });
   }
+
+loadCreatePost(){
+  this.navCtrl.push(PostCreateComponent);
+ }
+  
 }

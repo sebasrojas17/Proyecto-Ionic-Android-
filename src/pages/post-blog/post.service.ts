@@ -18,4 +18,11 @@ export class PostService {
       return Observable.throw(err);
     })
   }
+
+  newPost(newPost):Observable<any>{
+    return this.httpClt.post(`${APP_CONFIG.API_ENDPOINT}/posts`, newPost)
+    .map(res => {
+      return res;
+    })
+  }
 }

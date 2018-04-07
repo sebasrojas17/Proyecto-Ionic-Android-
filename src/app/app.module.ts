@@ -17,7 +17,11 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 *
 */
 
-import { PostService } from "../pages/home/post.service";
+import { PostService } from "../pages/post-blog/post.service";
+
+
+
+import { PostCreateComponent } from '../pages/post-blog/postblog-create/post-create';
 
 
 
@@ -26,7 +30,8 @@ import { PostService } from "../pages/home/post.service";
     MyApp,
     HomePage,
     ListPage,
-    SegmentsPage
+    SegmentsPage,
+    PostCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +43,8 @@ import { PostService } from "../pages/home/post.service";
     MyApp,
     HomePage,
     ListPage,
-    SegmentsPage
+    SegmentsPage,
+    PostCreateComponent
   ],
   providers: [
     StatusBar,

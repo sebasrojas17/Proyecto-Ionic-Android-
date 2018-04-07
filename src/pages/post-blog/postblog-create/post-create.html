@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+
+<form [formGroup]="postForm" novalidate>
+
+<ion-list>
+
+  <ion-item>
+    <ion-label floating>Titulo</ion-label>
+    <ion-input type="text" formControlName="title"></ion-input>
+  </ion-item>
+  <div *ngIf="!postForm.controls['title'].valid && postForm.controls['title'].touched">
+    <p>Por favor ingrese un titulo</p>
+  </div>
+
+  <ion-item>
+    <ion-label floating>Mensaje</ion-label>
+    <ion-input type="text" formControlName="title"></ion-input>
+  </ion-item>
+  <div *ngIf="!postForm.controls['title'].valid && postForm.controls['title'].touched">
+    <p>Por favor ingrese un mensaje</p>
+  </div>
+</ion-list>
+
+<button ion-button large (click)="addNewPost()">Guardar</button>
+
+</form>
+
+
+</ion-content>

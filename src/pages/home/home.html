@@ -16,8 +16,21 @@
 
   <button ion-button secondary menuToggle>Toggle Menu</button>
 
-  <p *ngFor="let item of post">
+  <ion-card *ngFor="let item of post">
+
+  <ion-card-header>
     {{item.title}}
-  </p>
-  
+  </ion-card-header>
+
+
+  <ion-card-content>
+    {{item.body}}
+  </ion-card-content>
+
+</ion-card>
+
+<ion-fab right bottom (click)="loadCreatePost()">
+  <button ion-fab ><ion-icon name="add"></ion-icon></button>
+</ion-fab>
+
 </ion-content>
